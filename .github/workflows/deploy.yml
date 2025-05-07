@@ -10,9 +10,9 @@ env:
 jobs:
   test:
     env: 
-      MONGODB_CLUSTER_ADDRESS: test0.database.net    # dummy cluster address
-      MONGODB_USERNAME: testusername@                # dummy username not created db
-      MONGODB_PASSWORD: iakjshkdskksnd               # dummy password
+      MONGODB_CLUSTER_ADDRESS:    # dummy cluster address
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}   # dummy username not created db
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 3389                                     # dummy
     runs-on: ubuntu-latest
     steps:
